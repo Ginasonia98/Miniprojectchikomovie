@@ -3,13 +3,18 @@ import { useEffect, useState } from "react";
 import NavbarSection from "../components/Navbar";
 import Footer from "../components/Footer";
 import ModalSection from "../components/Modal";
+import Carousel from "react-bootstrap/Carousel";
+
+
 import {
   generateRequestToken,
   validateRequestToken,
   generateSessionId,
   getAccount,
   deleteSessionId,
+  
 } from "../api";
+
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -160,14 +165,41 @@ const Home = () => {
       />
       <div className="App">
         <header className="App-header">
-          <h1>Chiko Movie</h1>
+          <div className="Carousel">
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="carousel"
+                  src="https://image.tmdb.org/t/p/w300/irIS5Tn3TXjNi1R9BpWvGAN4CZ1.jpg"
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="carousel"
+                  src="https://image.tmdb.org/t/p/w300/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="carousel"
+                  src="https://image.tmdb.org/t/p/w300/ps2oKfhY6DL3alynlSqY97gHSsg.jpg"
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </div>
           <input
             placeholder="search your favorite film"
             className="Movie-search"
             onChange={({ target }) => search(target.value)}
           />
-          <div className="Movie-container">
-            <PopularMovieList />
+          <div className="Container_wrapper">
+            <h3 className="Explanation">Popular</h3>
+            <div className="Movie-container">
+              <PopularMovieList />
+            </div>
           </div>
         </header>
       </div>
