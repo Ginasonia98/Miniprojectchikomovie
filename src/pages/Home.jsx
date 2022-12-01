@@ -5,16 +5,13 @@ import Footer from "../components/Footer";
 import ModalSection from "../components/Modal";
 import Carousel from "react-bootstrap/Carousel";
 
-
 import {
   generateRequestToken,
   validateRequestToken,
   generateSessionId,
   getAccount,
   deleteSessionId,
-  
 } from "../api";
-
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -123,16 +120,25 @@ const Home = () => {
   const PopularMovieList = () => {
     return popularMovies.map((movie, i) => {
       return (
-        <div className="Movie-wrapper" key={i}>
-          <div className="Movie-id">{movie.id}</div>
-          <div className="Movie-title">{movie.title}</div>
-          <img
-            className="Movie-image"
-            src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
-            alt="Movie"
-          />
-          <div className="Movie-popularity">{movie.popularity}</div>
-          <div className="Movie-overview">{movie.overview}</div>
+        <div className="col-3 mb-4" key={i}>
+          <div className="Movie-wrapper rounded-3">
+            <div className="Movie-id pt-2 fs-6">{movie.id}</div>
+            <div className="Movie-title pb-2 fs-5">{movie.title}</div>
+            <div className="px-2">
+              <img
+                className="Movie-image rounded-4"
+                src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
+                alt="Movie"
+              />
+            </div>
+            <div className="px-4">
+              <div className="position-relative bg-white h-200px wrapper top-card rounded-3">
+                <div className="Movie-popularity pt-2 fs-6">{movie.popularity}</div>
+                <div className="Movie-overview p-2 fs-6">{movie.overview}</div>
+              </div>
+            </div>
+            <br />
+          </div>
         </div>
       );
     });
@@ -170,22 +176,22 @@ const Home = () => {
               <Carousel.Item>
                 <img
                   className="carousel"
-                  src="https://image.tmdb.org/t/p/w300/irIS5Tn3TXjNi1R9BpWvGAN4CZ1.jpg"
-                  alt="First slide"
+                  src="https://www.blackadammovie.net/images/share.jpg"
+                  alt="Black Adam"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="carousel"
-                  src="https://image.tmdb.org/t/p/w300/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"
-                  alt="Second slide"
+                  src="https://www.dca.org.uk/assets/ce-cache/made/assets/media-carousel/blackpanther_630_300_70.jpg"
+                  alt="Wakanda"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="carousel"
-                  src="https://image.tmdb.org/t/p/w300/ps2oKfhY6DL3alynlSqY97gHSsg.jpg"
-                  alt="Third slide"
+                  src="https://s1.dmcdn.net/v/UG-5g1ZGaXzmCnrkM/x1080"
+                  alt="Blues Big City Adventure"
                 />
               </Carousel.Item>
             </Carousel>
@@ -196,9 +202,11 @@ const Home = () => {
             onChange={({ target }) => search(target.value)}
           />
           <div className="Container_wrapper">
-            <h3 className="Explanation">Popular</h3>
-            <div className="Movie-container">
-              <PopularMovieList />
+            <h3 className="Explanation px-2 py-4">Popular</h3>
+            <div className="container">
+              <div className="row">
+                <PopularMovieList />
+              </div>
             </div>
           </div>
         </header>

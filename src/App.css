@@ -28,9 +28,13 @@
 }
 
 .Movie-wrapper {
-  width: 500px;
   background-color: antiquewhite;
   color: black;
+  height: 100%;
+}
+
+.Movie-image {
+  width: 100%;
 }
 
 .Movie-search {
@@ -40,11 +44,6 @@
   padding: 16px;
   font-weight: bold;
   width: 50%;
-}
-
-.Movie-title {
-  height: 50px;
-  margin-top: 26px;
 }
 
 .Movie-movie-popularity {
@@ -73,7 +72,6 @@
   display: flex;
   margin: 15px;
   margin-left: 0px;
-  ;
 }
 
 .list {
@@ -134,12 +132,34 @@
 
 .carousel {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .Explanation {
   font-size: 30px;
-  margin-right: 70vmax;
-  margin-top: 15px;
+  text-align: left;
 }
 
+.h-200px {
+  max-height: 200px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.top-card {
+  top: -20px
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

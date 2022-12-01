@@ -15,24 +15,19 @@ function NavbarSection({ handleShow, session, handleSignOut, account }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Film" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Popular</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Currently playing
+                Now playing
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Top Rating</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Movie Series" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Popular</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Currently playing
+                Now playing
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Top Rating</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Discussion</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Leaderboard
-              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Support</NavDropdown.Item>
             </NavDropdown>
           </Nav>

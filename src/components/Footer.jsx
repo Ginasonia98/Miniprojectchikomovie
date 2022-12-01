@@ -11,7 +11,7 @@ const Footer = () => {
             <div>
               <br />
               <Button className="buttoncustom">
-                Hi User
+                Hello
               </Button>
             </div>
           </div>
