@@ -8,7 +8,7 @@ const getMovieList = async () => {
   return movie.data.results;
 };
 
-const getMovieList1 = async () => {
+const getplayingMovieList1 = async () => {
   const movie = await axios.get(
     `${baseURL}/movie/now_playing?&api_key=${apiKey}`
   );
@@ -69,7 +69,7 @@ const deleteSessionId = async (data) => {
 
 export {
   getMovieList,
-  getMovieList1,
+  getplayingMovieList1,
   searchMovie,
   generateRequestToken,
   validateRequestToken,
