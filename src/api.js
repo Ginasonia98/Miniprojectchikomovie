@@ -15,6 +15,14 @@ const getplayingMovieList1 = async () => {
   return movie.data.results;
 };
 
+const getratingMovieList1 = async () => {
+  const movie = await axios.get(
+    `${baseURL}/movie/top_rated?&api_key=${apiKey}`
+  );
+  return movie.data.results;
+};
+
+
 const searchMovie = async (q) => {
   const search = await axios.get(
     `${baseURL}/search/movie?query=${q}&api_key=${apiKey}`
@@ -70,6 +78,7 @@ const deleteSessionId = async (data) => {
 export {
   getMovieList,
   getplayingMovieList1,
+  getratingMovieList1,
   searchMovie,
   generateRequestToken,
   validateRequestToken,
