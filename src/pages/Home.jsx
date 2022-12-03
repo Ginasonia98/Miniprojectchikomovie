@@ -183,7 +183,7 @@ const Home = () => {
               <Carousel.Item>
                 <img
                   className="carousel"
-                  src="https://www.dca.org.uk/assets/ce-cache/made/assets/media-carousel/blackpanther_630_300_70.jpg"
+                  src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/11/09/1066116119.jpg"
                   alt="Wakanda"
                 />
               </Carousel.Item>

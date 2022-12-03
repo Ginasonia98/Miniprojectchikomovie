@@ -22,7 +22,6 @@ const getratingMovieList1 = async () => {
   return movie.data.results;
 };
 
-
 const searchMovie = async (q) => {
   const search = await axios.get(
     `${baseURL}/search/movie?query=${q}&api_key=${apiKey}`
