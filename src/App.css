@@ -163,3 +163,9 @@
   scrollbar-width: none;
   /* Firefox */
 }
+
+.Text {
+  font-size: larger;
+  color: black;
+  font-weight: bold;
+}

@@ -28,7 +28,6 @@ function NavbarSection({ handleShow, session, handleSignOut, account }) {
             </NavDropdown>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Discussion</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Support</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
