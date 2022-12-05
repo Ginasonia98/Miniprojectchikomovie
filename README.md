@@ -12,3 +12,5 @@ List of additional features used:
 4.Features Carousel
 5.Features Card on API Movie
 6.Features Form and Modal on Api Account
+
+link deploy:https://chikomoviestreaming.netlify.app/
