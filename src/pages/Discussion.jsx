@@ -5,18 +5,12 @@ const Discussion = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-3">
+        <div className="col-sm-12 col-md-6 col-lg-3 mb-4">
           <br />
           <div className="Text">Let's chat</div>
           <br />
           <Card>
-            <Card.Body
-              style={{
-                backgroundColor: "#00E7FF",
-                width: "500px",
-                textAlign: "center",
-              }}
-            >
+            <Card.Body className="container1">
               <Card.Title style={{ color: "white" }}>Film Update</Card.Title>
               <Card.Text style={{ color: "white" }}>
                 What movie update now?
@@ -28,13 +22,7 @@ const Discussion = () => {
           </Card>
           <br />
           <Card>
-            <Card.Body
-              style={{
-                backgroundColor: "#FFCAC8",
-                width: "500px",
-                textAlign: "center",
-              }}
-            >
+            <Card.Body className="container1">
               <Card.Title style={{ color: "white" }}>
                 Best movie of the week
               </Card.Title>
@@ -48,13 +36,7 @@ const Discussion = () => {
           </Card>
           <br />
           <Card>
-            <Card.Body
-              style={{
-                backgroundColor: "#F8F988",
-                width: "500px",
-                textAlign: "center",
-              }}
-            >
+            <Card.Body className="container1">
               <Card.Title style={{ color: "white" }}>
                 Best movie recommendation{" "}
               </Card.Title>

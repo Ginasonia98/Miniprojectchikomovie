@@ -177,7 +177,17 @@
   .Movie-search {
     width: 80%;
   }
+
+  .container {
+    width: auto;
+  }
+
   .carousel {
     height: 30vh;
   }
+}
+
+.container1 {
+  background-color: #FB2576;
+  align-items: center;
 }
