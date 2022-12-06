@@ -4,6 +4,7 @@ import NavbarSection from "../components/Navbar";
 import Footer from "../components/Footer";
 import ModalSection from "../components/Modal";
 import Carousel from "react-bootstrap/Carousel";
+import CardList from "../components/CardList";
 
 import {
   generateRequestToken,
@@ -12,6 +13,35 @@ import {
   getAccount,
   deleteSessionId,
 } from "../api";
+
+export const popularMovieList = (popularMovies) => {
+  return popularMovies.map((movie, i) => {
+    return (
+      <div className="col-sm-1 col-md-2 col-lg-3 mb-4" key={i}>
+        <div className="Movie-wrapper rounded-3">
+          <div className="Movie-id pt-2 fs-6">{movie.id}</div>
+          <div className="Movie-title pb-2 fs-5">{movie.title}</div>
+          <div className="px-2">
+            <img
+              className="Movie-image rounded-4"
+              src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
+              alt="Movie"
+            />
+          </div>
+          <div className="px-4">
+            <div className="position-relative bg-white h-200px wrapper top-card rounded-3">
+              <div className="Movie-popularity pt-2 fs-6">
+                {movie.popularity}
+              </div>
+              <div className="Movie-overview p-2 fs-6">{movie.overview}</div>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+    );
+  });
+};
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -117,33 +147,6 @@ const Home = () => {
     });
   }, []);
 
-  const PopularMovieList = () => {
-    return popularMovies.map((movie, i) => {
-      return (
-        <div className="col-3 mb-4" key={i}>
-          <div className="Movie-wrapper rounded-3">
-            <div className="Movie-id pt-2 fs-6">{movie.id}</div>
-            <div className="Movie-title pb-2 fs-5">{movie.title}</div>
-            <div className="px-2">
-              <img
-                className="Movie-image rounded-4"
-                src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
-                alt="Movie"
-              />
-            </div>
-            <div className="px-4">
-              <div className="position-relative bg-white h-200px wrapper top-card rounded-3">
-                <div className="Movie-popularity pt-2 fs-6">{movie.popularity}</div>
-                <div className="Movie-overview p-2 fs-6">{movie.overview}</div>
-              </div>
-            </div>
-            <br />
-          </div>
-        </div>
-      );
-    });
-  };
-
   const search = async (q) => {
     if (q.length > 3) {
       const query = await searchMovie(q);
@@ -205,7 +208,7 @@ const Home = () => {
             <h3 className="Explanation px-2 py-4">Popular</h3>
             <div className="container">
               <div className="row">
-                <PopularMovieList />
+                <CardList popularMovies={popularMovies} />
               </div>
             </div>
           </div>

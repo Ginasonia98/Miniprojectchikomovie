@@ -5,19 +5,17 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            <br/>
+          <div className="col-6 col-lg-3 mb-4">
+            <br />
             <div className="text-white">CHIKO STREAMING MOVIE</div>
             <div>
               <br />
-              <Button className="buttoncustom">
-                Hello
-              </Button>
+              <Button className="buttoncustom">Hello</Button>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-lg-3 mb-4">
             <div>
-              <br/>
+              <br />
               <h3 className="text-white">Basic</h3>
               <ul className="list">
                 <li className="text-white">About Chiko Movie Streaming</li>
@@ -28,9 +26,9 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-lg-3 mb-4">
             <div>
-              <br/>
+              <br />
               <h3 className="text-white">Community</h3>
               <ul className="list">
                 <li className="text-white">Guideline</li>
@@ -41,9 +39,9 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-lg-3 mb-4">
             <div>
-              <br/>
+              <br />
               <h3 className="text-white">Rule</h3>
               <ul className="list">
                 <li className="text-white">Terms of Use</li>

@@ -65,6 +65,7 @@
   width: 50%;
   background-color: white !important;
   color: #7978FF !important;
+  min-width: max-content;
 }
 
 .text {
@@ -120,6 +121,7 @@
   margin-left: 15px;
   background-color: white !important;
   color: #7978FF !important;
+  min-width: max-content;
 }
 
 .Profile {
@@ -128,6 +130,7 @@
   margin-right: 15px;
   background-color: white !important;
   color: #7978FF !important;
+  min-width: max-content;
 }
 
 .carousel {
@@ -168,4 +171,13 @@
   font-size: larger;
   color: black;
   font-weight: bold;
+}
+
+@media (width < 768px) {
+  .Movie-search {
+    width: 80%;
+  }
+  .carousel {
+    height: 30vh;
+  }
 }
