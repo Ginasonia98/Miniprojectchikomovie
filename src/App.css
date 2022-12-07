@@ -110,10 +110,10 @@
 
 .buttonnsignin {
   width: 10%;
-  margin-right: 12px;
   background-color: white !important;
   color: #7978FF !important;
-
+  min-width: max-content;
+  margin-right: 10px;
 }
 
 .buttonsignout {
@@ -184,6 +184,10 @@
 
   .carousel {
     height: 30vh;
+  }
+
+  .buttonnsignin{
+    width: 10%;
   }
 }
 

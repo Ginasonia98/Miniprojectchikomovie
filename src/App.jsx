@@ -5,7 +5,6 @@ import Playing from "./pages/NowPlaying";
 import Rating from "./pages/Rating";
 import Discussion from "./pages/Discussion";
 
-
 const App = () => {
   return (
     <Router>
