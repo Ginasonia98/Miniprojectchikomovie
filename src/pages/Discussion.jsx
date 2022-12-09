@@ -24,7 +24,7 @@ const Discussion = () => {
           <Card>
             <Card.Body className="container1">
               <Card.Title style={{ color: "white" }}>
-                Best movie of the week
+                Best Movie Of The Week
               </Card.Title>
               <Card.Text style={{ color: "white" }}>
                 What's the best movie of the week?
@@ -38,7 +38,7 @@ const Discussion = () => {
           <Card>
             <Card.Body className="container1">
               <Card.Title style={{ color: "white" }}>
-                Best movie recommendation{" "}
+                Best Movie Recommendation{" "}
               </Card.Title>
               <Card.Text style={{ color: "white" }}>
                 What movie recommendations do you think?
